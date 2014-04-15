@@ -33,7 +33,7 @@
     RedlandStorage *storage;
     
     storage = [RedlandStorage new];
-    STAssertNotNil(storage, nil);
+    XCTAssertNotNil(storage);
 }
 
 @end

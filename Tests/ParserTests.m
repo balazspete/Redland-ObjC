@@ -55,11 +55,11 @@ static NSString * const RDFXMLTestDataLocation = @"http://www.w3.org/1999/02/22-
     NSArray *allStatements;
     
     parser = [RedlandParser parserWithName:RedlandRDFXMLParserName];
-    STAssertNoThrow(stream = [parser parseString:RDFXMLTestData asStreamWithBaseURI:testURI], nil);
-    STAssertNotNil(stream, nil);
+    XCTAssertNoThrow(stream = [parser parseString:RDFXMLTestData asStreamWithBaseURI:testURI]);
+    XCTAssertNotNil(stream);
     allStatements = [[stream statementEnumerator] allObjects];
-    STAssertNotNil(allStatements, nil);
-    STAssertTrue([allStatements count] > 10, nil);
+    XCTAssertNotNil(allStatements);
+    XCTAssertTrue([allStatements count] > 10);
 }
 
 - (void)testParseRDFXMLData
@@ -72,13 +72,13 @@ static NSString * const RDFXMLTestDataLocation = @"http://www.w3.org/1999/02/22-
     NSString *path = [bundle pathForResource:@"rdf-syntax" ofType:@"rdf"];
 	NSData *data = [NSData dataWithContentsOfFile:path];
     
-	STAssertNotNil(data, nil);
+	XCTAssertNotNil(data);
     parser = [RedlandParser parserWithName:RedlandRDFXMLParserName];
-    STAssertNoThrow(stream = [parser parseData:data asStreamWithBaseURI:testURI], nil);
-    STAssertNotNil(stream, nil);
+    XCTAssertNoThrow(stream = [parser parseData:data asStreamWithBaseURI:testURI]);
+    XCTAssertNotNil(stream);
     allStatements = [[stream statementEnumerator] allObjects];
-    STAssertNotNil(allStatements, nil);
-    STAssertTrue([allStatements count] > 10, nil);
+    XCTAssertNotNil(allStatements);
+    XCTAssertTrue([allStatements count] > 10);
 }
 
 - (void)testConvenience
@@ -88,9 +88,9 @@ static NSString * const RDFXMLTestDataLocation = @"http://www.w3.org/1999/02/22-
     NSString *path = [bundle pathForResource:@"rdf-syntax" ofType:@"rdf"];
     NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
     
-	STAssertNotNil(path, nil);
-    STAssertNoThrow([model loadURL:url withContext:nil], nil);
-    STAssertTrue([model size] > 0, nil);
+	XCTAssertNotNil(path);
+    XCTAssertNoThrow([model loadURL:url withContext:nil]);
+    XCTAssertTrue([model size] > 0);
 }
 
 - (void)testParseError
@@ -98,13 +98,13 @@ static NSString * const RDFXMLTestDataLocation = @"http://www.w3.org/1999/02/22-
 	NSString *string = @"This is NOT RDF/XML.";
 	RedlandParser *parser = [RedlandParser parserWithName:RedlandRDFXMLParserName];
 	
-	STAssertThrowsSpecific([parser parseString:string asStreamWithBaseURI:[RedlandURI URIWithString:@"http://foo/"]], RedlandException, nil);
+	XCTAssertThrowsSpecific([parser parseString:string asStreamWithBaseURI:[RedlandURI URIWithString:@"http://foo/"]], RedlandException, nil);
 }
 
 - (void)testSetFeature
 {
 	RedlandParser *parser = [RedlandParser parserWithName:RedlandRDFXMLParserName];
-	STAssertNoThrow([parser setValue:[RedlandNode nodeWithLiteral:@"1"] ofFeature:RedlandScanForRDFFeature], nil);
+	XCTAssertNoThrow([parser setValue:[RedlandNode nodeWithLiteral:@"1"] ofFeature:RedlandScanForRDFFeature]);
 }
 
 @end

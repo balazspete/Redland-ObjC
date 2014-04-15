@@ -39,7 +39,7 @@
     RedlandNode *object2 = [RedlandNode nodeWithLiteral:@"another test"];
     
     RedlandModel *model = [RedlandModel new];
-    STAssertNotNil(model, nil);
+    XCTAssertNotNil(model);
     
     RedlandStatement *testStatement = [RedlandStatement statementWithSubject:subject
 																   predicate:predicate
@@ -51,22 +51,22 @@
 																   predicate:predicate
 																	  object:nil];
 
-    STAssertNoThrow([model addStatement:testStatement], nil);
-    STAssertEquals(1, [model size], nil);
-    STAssertTrue([model containsStatement:testStatement], nil);
-    STAssertEqualObjects(subject, [model sourceWithArc:predicate target:object], nil);
-    STAssertEqualObjects(predicate, [model arcWithSource:subject target:object], nil);
-    STAssertEqualObjects(object, [model targetWithSource:subject arc:predicate], nil);
-    STAssertTrue([model node:object hasIncomingArc:predicate], nil);
-    STAssertTrue([model node:subject hasOutgoingArc:predicate], nil);
-    STAssertNoThrow([model removeStatement:testStatement], nil);
-    STAssertFalse([model containsStatement:testStatement], nil);
+    XCTAssertNoThrow([model addStatement:testStatement]);
+    XCTAssertEqual(1, [model size]);
+    XCTAssertTrue([model containsStatement:testStatement]);
+    XCTAssertEqualObjects(subject, [model sourceWithArc:predicate target:object]);
+    XCTAssertEqualObjects(predicate, [model arcWithSource:subject target:object]);
+    XCTAssertEqualObjects(object, [model targetWithSource:subject arc:predicate]);
+    XCTAssertTrue([model node:object hasIncomingArc:predicate]);
+    XCTAssertTrue([model node:subject hasOutgoingArc:predicate]);
+    XCTAssertNoThrow([model removeStatement:testStatement]);
+    XCTAssertFalse([model containsStatement:testStatement]);
 	
-	STAssertNoThrow([model addStatement:testStatement], nil);
-	STAssertNoThrow([model addStatement:secondStatement], nil);
-    STAssertEquals(2, [model size], nil);
-	STAssertNoThrow([model removeStatementsLike:likeStatement], nil);
-    STAssertEquals(0, [model size], nil);
+	XCTAssertNoThrow([model addStatement:testStatement]);
+	XCTAssertNoThrow([model addStatement:secondStatement]);
+    XCTAssertEqual(2, [model size]);
+	XCTAssertNoThrow([model removeStatementsLike:likeStatement]);
+    XCTAssertEqual(0, [model size]);
 }
 
 - (void)testSubmodel
@@ -85,23 +85,23 @@
 	
 	// create the model
 	RedlandModel *model = [RedlandModel new];
-	STAssertNoThrow([model addStatement:main], nil);
-	STAssertNoThrow([model addStatement:sub1], nil);
-	STAssertNoThrow([model addStatement:sub2], nil);
-    STAssertEquals(3, [model size], nil);
+	XCTAssertNoThrow([model addStatement:main]);
+	XCTAssertNoThrow([model addStatement:sub1]);
+	XCTAssertNoThrow([model addStatement:sub2]);
+    XCTAssertEqual(3, [model size]);
 	
 	RedlandModel *submodel = [model submodelForSubject:content];
-	STAssertEquals(2, [submodel size], nil);
+	XCTAssertEqual(2, [submodel size]);
 	for (RedlandStatement *statement in [submodel statementEnumerator]) {
-		STAssertTrue([model containsStatement:statement], nil);
+		XCTAssertTrue([model containsStatement:statement]);
 	}
 	
 	// removing and re-adding
-	STAssertTrue([model removeSubmodel:submodel], nil);
-	STAssertEquals(1, [model size], nil);
+	XCTAssertTrue([model removeSubmodel:submodel]);
+	XCTAssertEqual(1, [model size]);
 	
-	STAssertTrue([model addSubmodel:submodel], nil);
-	STAssertEquals(3, [model size], nil);
+	XCTAssertTrue([model addSubmodel:submodel]);
+	XCTAssertEqual(3, [model size]);
 }
 
 - (void)testContextAddStatementBug
@@ -115,7 +115,7 @@
     statement = [RedlandStatement statementWithSubject:subject
 											 predicate:predicate
 												object:object];
-	STAssertNoThrow([model addStatement:statement withContext:nil], nil);
+	XCTAssertNoThrow([model addStatement:statement withContext:nil]);
 }
 
 

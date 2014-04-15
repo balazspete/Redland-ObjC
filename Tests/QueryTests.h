@@ -23,11 +23,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 @class RedlandModel, RedlandURI;
 
-@interface QueryTests : SenTestCase {
+@interface QueryTests : XCTestCase {
     RedlandModel *model;
     RedlandURI *uri;
 }

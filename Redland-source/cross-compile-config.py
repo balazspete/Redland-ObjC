@@ -10,7 +10,7 @@ SOURCES = [
 ]
 
 ARCHS = {
-	'iOS': ['armv7', 'armv7s'],
+	'iOS': ['armv7', 'armv7s', 'arm64'],
 	'Sim': ['i386'],
 	'Mac': ['i386', 'x86_64']
 }

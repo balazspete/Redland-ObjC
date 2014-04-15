@@ -29,9 +29,9 @@
 
 - (void)testDefaultWorld
 {
-    STAssertEquals([RedlandWorld defaultWorld], [RedlandWorld defaultWorld], nil);
-    STAssertTrue([RedlandWorld defaultWrappedWorld] != NULL, nil);
-    STAssertEquals([RedlandWorld defaultWrappedWorld], [RedlandWorld defaultWrappedWorld], nil);
+    XCTAssertEqual([RedlandWorld defaultWorld], [RedlandWorld defaultWorld]);
+    XCTAssertTrue([RedlandWorld defaultWrappedWorld] != NULL);
+    XCTAssertEqual([RedlandWorld defaultWrappedWorld], [RedlandWorld defaultWrappedWorld]);
 }
 
 @end

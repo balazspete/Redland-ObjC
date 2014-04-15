@@ -32,8 +32,8 @@
     RedlandURI *myURI;
     NSString *testString = @"http://www.example.com/";
     myURI = [[RedlandURI alloc] initWithString:testString];
-    STAssertNotNil(myURI, nil);
-    STAssertEqualObjects(testString, [myURI stringValue], nil);
+    XCTAssertNotNil(myURI);
+    XCTAssertEqualObjects(testString, [myURI stringValue]);
 }
 
 - (void)testURLInit
@@ -41,9 +41,9 @@
     RedlandURI *myURI;
     NSURL *testURL = [NSURL URLWithString:@"http://www.example.com/"];
     myURI = [RedlandURI URIWithURL:testURL];
-    STAssertNotNil(myURI, nil);
-    STAssertEqualObjects(testURL, [myURI URLValue], nil);
-    STAssertEqualObjects([testURL absoluteString], [myURI stringValue], nil);
+    XCTAssertNotNil(myURI);
+    XCTAssertEqualObjects(testURL, [myURI URLValue]);
+    XCTAssertEqualObjects([testURL absoluteString], [myURI stringValue]);
 }
 
 - (void)testComparing
@@ -54,16 +54,16 @@
     firstURI = [RedlandURI URIWithString:firstString];
     secondURI = [RedlandURI URIWithString:secondString];
     firstCopyURI = [RedlandURI URIWithString:firstString];
-    STAssertEqualObjects(firstURI, firstURI, nil);
-    STAssertFalse([firstURI isEqual:secondURI], nil);
-    STAssertEqualObjects(firstURI, firstCopyURI, nil);
+    XCTAssertEqualObjects(firstURI, firstURI);
+    XCTAssertFalse([firstURI isEqual:secondURI]);
+    XCTAssertEqualObjects(firstURI, firstCopyURI);
 }
 
 - (void)testCopying
 {
     RedlandURI *testURI = [RedlandURI URIWithString:@"http://www.foo.com/bar#test"];
     RedlandURI *copyURI = [testURI copy];
-    STAssertEqualObjects(testURI, copyURI, nil);
+    XCTAssertEqualObjects(testURI, copyURI);
 }
 
 @end

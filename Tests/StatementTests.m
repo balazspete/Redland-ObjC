@@ -37,18 +37,18 @@
 	RedlandStatement *statement = [RedlandStatement statementWithSubject:subject
 															   predicate:predicate
 																  object:object];
-	STAssertNotNil(statement, nil);
-	STAssertTrue([statement isComplete], nil);
-	STAssertEqualObjects(subject, [statement subject], nil);
-	STAssertEqualObjects(predicate, [statement predicate], nil);
-	STAssertEqualObjects(object, [statement object], nil);
-	STAssertEqualObjects(statement, statement, nil);
+	XCTAssertNotNil(statement);
+	XCTAssertTrue([statement isComplete]);
+	XCTAssertEqualObjects(subject, [statement subject]);
+	XCTAssertEqualObjects(predicate, [statement predicate]);
+	XCTAssertEqualObjects(object, [statement object]);
+	XCTAssertEqualObjects(statement, statement);
 	
 	statement = [RedlandStatement statementWithSubject:subject
 											 predicate:predicate
 												object:nil];
-	STAssertNotNil(statement, nil);
-	STAssertFalse([statement isComplete], nil);
+	XCTAssertNotNil(statement);
+	XCTAssertFalse([statement isComplete]);
 }
 
 - (void)testEquality
@@ -64,16 +64,16 @@
 	RedlandStatement *statement2 = [RedlandStatement statementWithSubject:subject
 																predicate:predicate
 																   object:object2];
-	STAssertFalse([statement1 isEqual:statement2], nil);
-	STAssertFalse([statement1 matchesPartialStatement:statement2], nil);
+	XCTAssertFalse([statement1 isEqual:statement2]);
+	XCTAssertFalse([statement1 matchesPartialStatement:statement2]);
 	statement2 = [RedlandStatement statementWithSubject:subject
 											  predicate:predicate
 												 object:object1];
-	STAssertEqualObjects(statement1, statement2, nil);
+	XCTAssertEqualObjects(statement1, statement2);
 	statement1 = [RedlandStatement statementWithSubject:subject
 											  predicate:predicate
 												 object:nil];
-	STAssertTrue([statement2 matchesPartialStatement:statement1], nil);
+	XCTAssertTrue([statement2 matchesPartialStatement:statement1]);
 }
 
 - (void)testArchiving
@@ -84,10 +84,10 @@
 	
 	RedlandStatement *sourceStatement = [RedlandStatement statementWithSubject:fooNode predicate:fooPredicate object:hello];
 	NSData *data = [NSKeyedArchiver archivedDataWithRootObject:sourceStatement];
-	STAssertNotNil(data, nil);
+	XCTAssertNotNil(data);
 	RedlandStatement *decodedStatement = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-	STAssertNotNil(decodedStatement, nil);
-	STAssertEqualObjects(sourceStatement, decodedStatement, nil);
+	XCTAssertNotNil(decodedStatement);
+	XCTAssertEqualObjects(sourceStatement, decodedStatement);
 }
 
 @end

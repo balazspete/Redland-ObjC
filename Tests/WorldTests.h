@@ -23,9 +23,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface WorldTests : SenTestCase {
+@interface WorldTests : XCTestCase {
 }
 
 @end

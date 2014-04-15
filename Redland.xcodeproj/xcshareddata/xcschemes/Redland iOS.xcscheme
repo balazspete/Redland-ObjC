@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
+   LastUpgradeVersion = "0510"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EEE7B45D15C84978004D5A68"
-               BuildableName = "Tests-iOS.octest"
+               BuildableName = "Tests-iOS.xctest"
                BlueprintName = "Tests-iOS"
                ReferencedContainer = "container:Redland.xcodeproj">
             </BuildableReference>

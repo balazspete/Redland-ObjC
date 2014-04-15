@@ -74,7 +74,6 @@
 		ED48EB7B08BB590F00ACF14F /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2B3E9D06EDD9BA00CE81BB /* libxml2.dylib */; };
 		ED48EB7C08BB591000ACF14F /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8D251B0688A36D0039DA12 /* libcrypto.dylib */; };
 		ED48EB8008BB593800ACF14F /* libxslt.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED48EB7D08BB593800ACF14F /* libxslt.1.dylib */; };
-		ED48EB8208BB596300ACF14F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED48EB8108BB596300ACF14F /* SenTestingKit.framework */; };
 		ED48EBA208BB5A2C00ACF14F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		ED48EBA308BB5A2D00ACF14F /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE840307C02AAC07 /* AppKit.framework */; };
 		ED48EBA408BB5B3E00ACF14F /* NamespaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED69A52B06F9F35E00A624F7 /* NamespaceTests.m */; };
@@ -242,7 +241,6 @@
 		EEE7B4B215C84F86004D5A68 /* rdf_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = EE0CB66015BE5CC1004BB6C9 /* rdf_stream.h */; settings = {ATTRIBUTES = (); }; };
 		EEE7B4B315C84F86004D5A68 /* rdf_uri.h in Headers */ = {isa = PBXBuildFile; fileRef = EE0CB66115BE5CC1004BB6C9 /* rdf_uri.h */; settings = {ATTRIBUTES = (); }; };
 		EEE7B4B415C84F86004D5A68 /* rdf_utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = EE0CB66215BE5CC1004BB6C9 /* rdf_utf8.h */; settings = {ATTRIBUTES = (); }; };
-		EEE7B4B615C85A2E004D5A68 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED48EB8108BB596300ACF14F /* SenTestingKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -334,7 +332,6 @@
 		ED48EB4208BB554300ACF14F /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		ED48EB5008BB557A00ACF14F /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED48EB7D08BB593800ACF14F /* libxslt.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxslt.1.dylib; path = /usr/lib/libxslt.1.dylib; sourceTree = "<absolute>"; };
-		ED48EB8108BB596300ACF14F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		ED66E3DC081EA37600951AB6 /* libcurl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.3.dylib; path = /usr/lib/libcurl.3.dylib; sourceTree = "<absolute>"; };
 		ED699ECF06F9D3D600A624F7 /* RedlandWrappedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedlandWrappedObject.h; sourceTree = "<group>"; };
 		ED699ED006F9D3D600A624F7 /* RedlandWrappedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedlandWrappedObject.m; sourceTree = "<group>"; };
@@ -460,7 +457,7 @@
 		EEDE81B815BF375F00AC2B64 /* librasqal.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = librasqal.dylib; sourceTree = "<group>"; };
 		EEDE81B915BF375F00AC2B64 /* librdf.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = librdf.dylib; sourceTree = "<group>"; };
 		EEE7B44E15C84978004D5A68 /* libredland-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libredland-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEE7B45E15C84978004D5A68 /* Tests-iOS.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-iOS.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE7B45E15C84978004D5A68 /* Tests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -488,7 +485,6 @@
 				ED48EB7B08BB590F00ACF14F /* libxml2.dylib in Frameworks */,
 				ED48EB7C08BB591000ACF14F /* libcrypto.dylib in Frameworks */,
 				ED48EB8008BB593800ACF14F /* libxslt.1.dylib in Frameworks */,
-				ED48EB8208BB596300ACF14F /* SenTestingKit.framework in Frameworks */,
 				ED48EBA208BB5A2C00ACF14F /* Cocoa.framework in Frameworks */,
 				ED48EBA308BB5A2D00ACF14F /* AppKit.framework in Frameworks */,
 				EEBFED8C15C0A9B600E352C7 /* Redland.framework in Frameworks */,
@@ -511,7 +507,6 @@
 			files = (
 				EE555EE315C873B000F26A1A /* libz.dylib in Frameworks */,
 				EE205F2E1602917C0020752E /* libredland-ios.a in Frameworks */,
-				EEE7B4B615C85A2E004D5A68 /* SenTestingKit.framework in Frameworks */,
 				EE555EDB15C86B5700F26A1A /* libxml2.dylib in Frameworks */,
 				EE555EDC15C86B5900F26A1A /* libxslt.1.dylib in Frameworks */,
 			);
@@ -527,7 +522,7 @@
 				ED8214C707397B78001CC6CB /* RedlandDocumentation */,
 				ED48EB5008BB557A00ACF14F /* Tests.octest */,
 				EEE7B44E15C84978004D5A68 /* libredland-ios.a */,
-				EEE7B45E15C84978004D5A68 /* Tests-iOS.octest */,
+				EEE7B45E15C84978004D5A68 /* Tests-iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -558,7 +553,6 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ED48EB8108BB596300ACF14F /* SenTestingKit.framework */,
 				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
 				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
@@ -1063,8 +1057,8 @@
 			);
 			name = "Tests-iOS";
 			productName = "redland-iosTests";
-			productReference = EEE7B45E15C84978004D5A68 /* Tests-iOS.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = EEE7B45E15C84978004D5A68 /* Tests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -1072,7 +1066,8 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = ED48EB3308BB53BE00ACF14F /* Build configuration list for PBXProject "Redland" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1331,7 +1326,6 @@
 		ED48EB2408BB53BE00ACF14F /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1368,7 +1362,6 @@
 		ED48EB2508BB53BE00ACF14F /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
@@ -1505,7 +1498,6 @@
 		ED48EB5208BB559800ACF14F /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1534,7 +1526,6 @@
 		ED48EB5308BB559800ACF14F /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
@@ -1564,6 +1555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BDB_LDFLAGS = "$(BERKELEYDB_PREFIX)/lib/libdb.a";
+				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 			};
 			name = Debug;
@@ -1571,7 +1563,6 @@
 		EE14DAB015C70ED7003B9373 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1608,7 +1599,6 @@
 		EE14DAB115C70ED7003B9373 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1838,8 +1828,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(inherited)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1860,7 +1851,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Development;
 		};
@@ -1874,8 +1864,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(inherited)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1896,7 +1887,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -1910,8 +1900,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(inherited)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1926,7 +1917,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Deployment;
 		};

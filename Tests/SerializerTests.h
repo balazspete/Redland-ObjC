@@ -23,11 +23,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 @class RedlandModel, RedlandURI;
 
-@interface SerializerTests : SenTestCase {
+@interface SerializerTests : XCTestCase {
     RedlandModel *model;
     RedlandURI *uri;
 }

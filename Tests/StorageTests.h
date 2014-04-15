@@ -23,8 +23,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface StorageTests : SenTestCase {
+@interface StorageTests : XCTestCase {
 }
 @end
